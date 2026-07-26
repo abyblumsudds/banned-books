@@ -1,0 +1,376 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --background: #F6F1E8;
+    --card: #FFFFFF;
+    --text: #111111;
+    --redaction-black: #000000;
+    --censored-gray: #E5E5E5;
+    --link: #B00020;
+    --link-focus: #F9D65C;
+    --link-hover: #7A0016;
+    --link-visited: #6D213C;
+    --white-text: #FFFFFF;
+}
+
+body {
+    color: var(--text);
+    background-color: var(--background);
+    line-height: 1.5;
+    font-family: "Atkinson Hyperlegible", Arial, sans-serif;
+    font-size: 100%;
+}
+
+.header-container,
+.section-container,
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Headings, Links, Buttons, Images */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Special Elite", Georgia, serif;
+}
+
+h1 {
+    font-size: 250%;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 200%;
+    line-height: 1.15;
+}
+
+h3 {
+    font-size: 150%;
+    line-height: 1.2;
+}
+
+h4 {
+    font-size: 125%;
+    line-height: 1.25;
+}
+
+a {
+    color: var(--link);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+a:visited {
+    color: var(--link-visited);
+}
+
+a:hover,
+a:focus {
+    color: var(--link-hover);
+    text-decoration-thickness: 3px;
+}
+
+a:focus {
+    outline: 3px solid var(--link-focus);
+    outline-offset: 3px;
+}
+
+a:active {
+    color: var(--redaction-black);
+}
+
+.primary-button {
+    background-color: var(--link);
+    color: var(--white-text);
+    border: 2px solid var(--link);
+}
+
+.primary-button:hover,
+.primary-button:focus {
+    background-color: var(--redaction-black);
+    border-color: var(--redaction-black);
+}
+
+.secondary-button {
+    background-color: var(--redaction-black);
+    color: var(--white-text);
+    border: 2px solid var(--redaction-black);
+}
+
+.secondary-button {
+    background-color: var(--card);
+    color: var(--redaction-black);
+}
+
+/* Redaction Decor */
+
+.redacted {
+    background-color: var(--redaction-black);
+    color: var(--white-text);
+    font-size: 65%;
+    padding: 10px;
+}
+
+/* Header Section (title & navbar) */
+
+.site-header {
+    padding: 30px 0;
+    border-bottom: 4px solid var(--redaction-black);
+}
+
+.site-logo {
+    font-family: "Special Elite", Georgia, serif;
+    font-size: 150%;
+}
+
+a:has(> .site-logo) {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.main-navigation {
+    position: static;
+    right: 20px;
+    top: 50%;
+    transform: none;
+    background-color: var(--text);
+    margin-bottom: 0;
+    margin-left: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.main-navigation ul {
+    display: none;
+    align-items: center;
+    width: 100%;
+}
+
+.main-navigation li {
+    width: 100%;
+    text-align: center;
+}
+
+.navigation-list {
+    width: max-content;
+    min-width: 200px;
+    position: fixed;
+    z-index: 1000;
+    left: auto;
+    right: 0;
+    display: none;
+    background-color: var(--text);
+}
+
+.navigation-list a {
+    color: var(--white-text);
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+}
+
+.navigation-list a:hover,
+.navigation-list a:focus {
+    background-color: var(--link-focus);
+    color: var(--redaction-black);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+.navigation-list a:focus {
+    outline: 3px solid var(--link-focus);
+    outline-offset: 3px;
+}
+
+.navigation-list a.active-page {
+    background-color: var(--link);
+    color: var(--white-text);
+    font-weight: 700;
+}
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    padding: 8px 12px;
+    text-align: center;
+    color: var(--white-text);
+    width: auto;
+    cursor: pointer;
+}
+
+.menu-btn::after {
+    content: "\2630";
+    font-size: 150%;
+}
+
+#checkbox-toggle {
+    display: none;
+}
+
+#checkbox-toggle:checked~.menu {
+    display: block;
+}
+
+#checkbox-toggle:checked~.menu-btn::after {
+    content: "\2716";
+}
+
+.sr-only {
+    /* Hide the checkbox toggle label, for screen readers only. */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Main Content */
+
+.section-label {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--redaction-black);
+    color: var(--white-text);
+    font-size: 87.5%;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.event-grid,
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.events-section {
+    background-color: var(--link-focus);
+    border-top: 10px solid var(--redaction-black);
+}
+
+.event-card {
+    background-color: var(--card);
+    color: var(--text);
+    border: 2px solid var(--redaction-black);
+    border-top: 8px solid var(--link-focus);
+    box-shadow: 6px 6px 0 var(--censored-gray);
+}
+
+.event-card .event-date {
+    background-color: var(--link-focus);
+    color: var(--text);
+    border: 2px solid var(--redaction-black);
+}
+
+.testimonials-section {
+    background-color: var(--censored-gray);
+    border-top: 10px solid var(--link);
+}
+
+.testimonial-card {
+    background-color: var(--card);
+    color: var(--text);
+    border: 2px solid var(--redaction-black);
+    border-top: 8px solid var(--censored-gray);
+    box-shadow: 6px 6px 0 var(--censored-gray);
+}
+
+.testimonial-card blockquote {
+    border-left: 6px solid var(--redaction-black);
+    padding-left: 1rem;
+}
+
+/* Form */
+
+label {
+    display: block;
+    margin-bottom: .25em;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    padding: .4em;
+    margin-bottom: .5em;
+}
+
+textarea {
+    height: 5em;
+}
+
+/* Footer Section */
+
+footer {
+    background-color: var(--text);
+    color: var(--white-text);
+    padding: 20px;
+    text-align: center;
+    font-size: 86%;
+}
+
+/* Transform for screens bigger than 768px */
+
+@media only screen and (min-width: 768px) {}
+
+/* Transform for screens bigger than 1024px */
+
+@media only screen and (min-width: 1024px) {
+    .menu-btn {
+        display: none;
+    }
+
+    .navbar {
+        padding: 6px;
+        margin-bottom: 0;
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: auto;
+        flex-wrap: nowrap;
+        position: static;
+    }
+
+    .navbar li {
+        width: auto;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 14px 16px;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+}
