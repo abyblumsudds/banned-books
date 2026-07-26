@@ -11,6 +11,12 @@
 
     <title>The Censored Shelf | Home</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Special+Elite&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -21,10 +27,12 @@
         <div class="header-container">
 
             <a class="site-logo" href="index.html">
-                The Censored Shelf
+                The <span class="redacted">Censored</span> Shelf
             </a>
 
             <nav class="main-navigation" aria-label="Main navigation">
+                <input type="checkbox" id="checkbox-toggle">
+                <label for="checkbox-toggle" class="menu-btn"><span class="sr-only">Open navigation menu</span></label>
                 <ul class="navigation-list">
                     <li>
                         <a class="active-page" href="index.html">Home</a>
@@ -362,7 +370,7 @@
                     </p>
                 </div>
 
-                <a class="primary-button" href="contact.html">
+                <a class="black-button" href="contact.html">
                     Contact the Store
                 </a>
 
