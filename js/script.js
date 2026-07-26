@@ -7,7 +7,7 @@ const banned_books = [
         image: "images/handmaids_tale.jpg"
     },
     {
-        title: "How to Be Ace: A Memoir of Growing Up Asexual by Rebecca Burgess",
+        title: "How to Be Ace: A Memoir of Growing Up Asexual",
         author: "Rebecca Burgess",
         reason: "Nudity; LGBTQIA+ representation",
         description: "A graphic memoir that explores asexuality, mental health, and coming of age in a sex-obsessed culture.",
