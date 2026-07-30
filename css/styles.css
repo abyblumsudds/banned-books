@@ -115,7 +115,7 @@ a:active {
     padding: 12px 24px;
     text-decoration: none;
     font-weight: 600;
-    transition: background-color 0.3 ease, transform 0.2 ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .primary-button {
@@ -346,17 +346,20 @@ section {
     font-size: 86%;
 }
 
-.books-section {
-    background-color: var(--card);
-    text-align: center;
-}
-
-.book-grid {
+.book-grid,
+.event-grid,
+.testimonial-grid,
+.resource-grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 20px;
     margin-bottom: 20px;
+}
+
+.books-section {
+    background-color: var(--card);
+    text-align: center;
 }
 
 .book-card {
@@ -402,15 +405,6 @@ section {
 
 .section-link {
     font-weight: 700;
-}
-
-.event-grid,
-.testimonial-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    gap: 20px;
-    margin-bottom: 20px;
 }
 
 .events-section {
@@ -475,7 +469,8 @@ section {
     border-top: 10px solid var(--text);
 }
 
-.testimonial-card {
+.testimonial-card,
+.resource-card {
     background-color: var(--card);
     border: 1px solid var(--censored-gray);
     padding: 2rem;
@@ -487,7 +482,7 @@ section {
     line-height: 1.5rem;
 }
 
-.testimonial-card blockquote {
+.testimonial-quote {
     font-family: "Special Elite", Georgia, serif;
     color: var(--text);
     font-size: 1.1rem;
@@ -498,12 +493,16 @@ section {
 
 }
 
-figcaption {
+.testimonial-name {
     text-align: right;
     font-size: 0.9rem;
     color: var(--link);
     font-weight: bold;
     letter-spacing: 1px;
+}
+
+.resource-blurb {
+    margin-top: 20px;
 }
 
 .contact-banner {
@@ -657,7 +656,8 @@ footer {
     }
 
     .event-grid,
-    .testimonial-grid {
+    .testimonial-grid,
+    .resource-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
