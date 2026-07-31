@@ -587,6 +587,28 @@ legend {
     margin-bottom: 1rem;
 }
 
+
+.radio-option,
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.radio-option input,
+.checkbox-option input {
+    width: auto !important;
+    flex: none;
+    margin: 0;
+}
+
+.radio-option label,
+.checkbox-option label {
+    display: inline !important;
+    margin: 0;
+}
+
 /* Footer Section */
 
 footer {
