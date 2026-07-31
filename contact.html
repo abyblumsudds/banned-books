@@ -49,53 +49,69 @@
 
         </div>
     </header>
+
     <main>
-        <h2> Suggest a title, ask a question, or provide a comment below: </h2>
-        <div class="item featured"> 
-            <h3> Submit a recommendation for our shelves below </h3>
-
-            <form action="submit.html" method="post">
-                <label for="comments"> Title </label>        
-                <textarea id="comments" placeholder="Suggest a title" required> </textarea>
-
-                <label for="comments"> Author </label>
-                <textarea id="comments" placeholder="Provide the author's name" required> </textarea>
-                
-                <button type ="submit" class="black-button"> Submit </button>
-                <button type ="reset" class="black-button"> Cancel</button>
-            </form>
-        </div>
-
-    <div class="item featured">
-        <h3> Comments or Questions? </h3>
+        <!-- Hero section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Contact Us </h1>
+            </div>
+        </section>
+        <!--Recommendation section -->
+        
+      <section class="recommendation-section" id="recommend-titles">
+    <div class="item-featured">
+        <h3>Comments or Questions?</h3>
 
         <form action="submit.html" method="post">
-        <textarea id="comments" placeholder="Provide the author's name" required> </textarea>
-         
-            <label for="email"> Your Email </label>
-            <input type="email" id="email" name="email" placeholder="1984@bannedbooks.com" required >
-            <label for="first_name"> Your Name </label>
-            <input type="text" id="first_name" name="first_name" placeholder="George Orwell"required>
-            <button type ="submit" class="black-button"> Submit </button>
-            <button type ="reset" class="black-button"> Cancel</button>
-       </form>
+
+            <label for="submission">
+                Suggest a title, ask a question, or provide a comment below:
+            </label>
+
+            <select id="submission" name="submission_type" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="suggestion">Suggest a book for us to carry</option>
+                <option value="comment">Leave a comment</option>
+                <option value="question">Ask us a question</option>
+            </select>
+
+            <textarea id="message" name="message"
+                placeholder="Type your suggestion, question, or comment here"
+                rows="5" required></textarea>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email"
+                placeholder="1984@bannedbooks.com" required>
+
+            <label for="first_name">Your Name</label>
+            <input type="text" id="first_name" name="first_name"
+                placeholder="George Orwell" required>
+
+            <button type="submit" class="black-button">Submit</button>
+            <button type="reset" class="black-button">Cancel</button>
+
+        </form>
     </div>
-<form action="submit.html" method="post">
+</section>
+
+<!--Job application section-->
+    <form action="submit.html" method="post">
   <h2>Interested in working with us? Apply below </h2>
   <!-- SECTION 1: Personal Information -->
   <fieldset>
     <legend>Personal Information</legend>
-    <div class="item featured">
+    <div class="item-featured">
       <label for="full-name">Full Name</label>
       <input type="text" id="full-name" name="user_name" required>
     </div>
 
-    <div class="item featured">
+    <div class="item-featured">
       <label for="email">Email Address</label>
       <input type="email" id="email" name="user_email" required>
     </div>
 
-    <div class="item featured">
+    <div class="item-featured">
       <label for="phone">Phone Number</label>
       <input type="tel" id="phone" name="user_phone">
     </div>
@@ -104,7 +120,7 @@
   <!-- SECTION 2: Role Preferences -->
   <fieldset>
     <legend>Role & Department</legend>
-    <div class="item featured">
+    <div class="item-featured">
       <label for="department">Department</label>
       <select id="department" name="user_dept" required>
         <option value="" disabled selected>Select a department...</option>
@@ -147,14 +163,14 @@
       </div>
     </div>
 
-    <div class="iteam featured">
+    <div class="item-featured">
       <label for="cover_letter">Cover Letter / Additional Comments</label>
       <textarea id="cover_letter" name="user_comments" rows="6" placeholder="Tell us why you're a great fit..."></textarea>
     </div>
   </fieldset>
 
   <!-- Submission -->
-  <div class="item featured">
+  <div class="item-featured">
     <button type ="submit" class="black-button"> Submit </button>
     <button type ="reset" class="black-button"> Cancel</button>
   </div>
