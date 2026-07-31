@@ -98,29 +98,26 @@
 <!--Job application section-->
     <form action="submit.html" method="post">
   <h2>Interested in working with us? Apply below </h2>
+  <section class="job-application" id="application">
+    <div class="item-featured">
   <!-- SECTION 1: Personal Information -->
   <fieldset>
     <legend>Personal Information</legend>
-    <div class="item-featured">
       <label for="full-name">Full Name</label>
       <input type="text" id="full-name" name="user_name" required>
-    </div>
-
-    <div class="item-featured">
+ 
       <label for="email">Email Address</label>
       <input type="email" id="email" name="user_email" required>
-    </div>
+  
 
-    <div class="item-featured">
       <label for="phone">Phone Number</label>
       <input type="tel" id="phone" name="user_phone">
-    </div>
+
   </fieldset>
 
   <!-- SECTION 2: Role Preferences -->
   <fieldset>
     <legend>Role & Department</legend>
-    <div class="item-featured">
       <label for="department">Department</label>
       <select id="department" name="user_dept" required>
         <option value="" disabled selected>Select a department...</option>
@@ -129,29 +126,23 @@
         <option value="web"> Website Development </option>
         <option value="community">Community Outreach </option>
       </select>
-    </div>
+    
 
 
   
-     <div class="form-group">
-      <label>Preferred Employment Type</label>
-      <div class="radio-group">
+      <legend>Preferred Employment Type</lengend>
         <input type="radio" id="ft" name="job_type" value="full-time">
         <label for="ft">Full-Time</label>
         
         <input type="radio" id="pt" name="job_type" value="part-time">
         <label for="pt">Part-Time</label>
-      </div>
-    </div>
-    </div>
+
   </fieldset>
 
   <!-- SECTION 3: Qualifications -->
     <fieldset>
     <legend>Skills & Experience</legend>
-    <div class="form-group">
       <label>Technical Skills (Select all that apply)</label>
-      <div class="checkbox-group">
         <input type="checkbox" id="js" name="skills" value="javascript">
         <label for="js">JavaScript</label>
         
@@ -160,21 +151,17 @@
         
         <input type="checkbox" id="py" name="skills" value="python">
         <label for="py">Python</label>
-      </div>
-    </div>
+    
 
-    <div class="item-featured">
       <label for="cover_letter">Cover Letter / Additional Comments</label>
       <textarea id="cover_letter" name="user_comments" rows="6" placeholder="Tell us why you're a great fit..."></textarea>
-    </div>
   </fieldset>
 
   <!-- Submission -->
-  <div class="item-featured">
     <button type ="submit" class="black-button"> Submit </button>
     <button type ="reset" class="black-button"> Cancel</button>
-  </div>
 </form>
+</section>
 
  </main>
     <!-- Site footer -->
