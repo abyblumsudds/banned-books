@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="The Censored Shelf is a fictional bookstore and educational resource focused on banned and challenged books.">
+
+    <title>The Censored Shelf | Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Special+Elite&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Site header -->
+    <header class="site-header">
+        <div class="header-container">
+
+            <a class="site-logo" href="index.html">
+                The <span class="redacted">Censored</span> Shelf
+            </a>
+
+            <nav class="main-navigation" aria-label="Main navigation">
+                <input type="checkbox" id="checkbox-toggle">
+                <label for="checkbox-toggle" class="menu-btn"><span class="sr-only">Open navigation menu</span></label>
+                <ul class="navigation-list">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="resource.html">Resources</a>
+                    </li>
+
+                    <li>
+                        <a class="active-page">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <main>
+        <h2> Suggest a title, ask a question, or provide a comment below: </h2>
+        <div class="item featured">
+            <h3> Submit a recommendation for our shelves below </h3>
+
+            <form action="submit.html" method="post">
+                <label for="comments"> Title </label>
+                <textarea id="comments" placeholder="Suggest a title" required> </textarea>
+
+                <label for="comments"> Author </label>
+                <textarea id="comments" placeholder="Provide the author's name" required> </textarea>
+
+                <button type="submit" class="black-button"> Submit </button>
+                <button type="reset" class="black-button"> Cancel</button>
+            </form>
+        </div>
+
+        <div class="item featured">
+            <h3> Comments or Questions? </h3>
+
+            <form action="submit.html" method="post">
+                <textarea id="comments" placeholder="Provide the author's name" required> </textarea>
+
+                <label for="email"> Your Email </label>
+                <input type="email" id="email" name="email" placeholder="1984@bannedbooks.com" required>
+                <label for="first_name"> Your Name </label>
+                <input type="text" id="first_name" name="first_name" placeholder="George Orwell" required>
+                <button type="submit" class="black-button"> Submit </button>
+                <button type="reset" class="black-button"> Cancel</button>
+            </form>
+        </div>
+        <form action="submit.html" method="post">
+            <h2>Interested in working with us? Apply below </h2>
+            <!-- SECTION 1: Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="item featured">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="user_name" required>
+                </div>
+
+                <div class="item featured">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="user_email" required>
+                </div>
+
+                <div class="item featured">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="user_phone">
+                </div>
+            </fieldset>
+
+            <!-- SECTION 2: Role Preferences -->
+            <fieldset>
+                <legend>Role & Department</legend>
+                <div class="item featured">
+                    <label for="department">Department</label>
+                    <select id="department" name="user_dept" required>
+                        <option value="" disabled selected>Select a department...</option>
+                        <option value="buying">Book Buying</option>
+                        <option value="sales">Customer Service </option>
+                        <option value="web"> Website Development </option>
+                        <option value="community">Community Outreach </option>
+                    </select>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label>Preferred Employment Type</label>
+                    <div class="radio-group">
+                        <input type="radio" id="ft" name="job_type" value="full-time">
+                        <label for="ft">Full-Time</label>
+
+                        <input type="radio" id="pt" name="job_type" value="part-time">
+                        <label for="pt">Part-Time</label>
+                    </div>
+                </div>
+                </div>
+            </fieldset>
+
+            <!-- SECTION 3: Qualifications -->
+            <fieldset>
+                <legend>Skills & Experience</legend>
+                <div class="form-group">
+                    <label>Technical Skills (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="js" name="skills" value="javascript">
+                        <label for="js">JavaScript</label>
+
+                        <input type="checkbox" id="html" name="skills" value="html">
+                        <label for="html">HTML/CSS</label>
+
+                        <input type="checkbox" id="py" name="skills" value="python">
+                        <label for="py">Python</label>
+                    </div>
+                </div>
+
+                <div class="iteam featured">
+                    <label for="cover_letter">Cover Letter / Additional Comments</label>
+                    <textarea id="cover_letter" name="user_comments" rows="6"
+                        placeholder="Tell us why you're a great fit..."></textarea>
+                </div>
+            </fieldset>
+
+            <!-- Submission -->
+            <div class="item featured">
+                <button type="submit" class="black-button"> Submit </button>
+                <button type="reset" class="black-button"> Cancel</button>
+            </div>
+        </form>
+
+    </main>
+    <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-about">
+                <h2>The Censored Shelf</h2>
+
+                <p>
+                    A fictional bookstore and educational website created
+                    for a graduate web-development project.
+                </p>
+            </div>
+
+
+            <nav class="footer-navigation" aria-label="Footer navigation">
+                <h3>Explore</h3>
+
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="resource.html">Resources</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <div class="footer-disclaimer">
+                <h3>Disclaimer</h3>
+
+                <p>
+                    The Censored Shelf is not a real business. The store,
+                    events, and customer testimonials shown on this website
+                    are fictional and were created for educational purposes.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 The Censored Shelf. Created for educational purposes.
+            </p>
+        </div>
+    </footer>
+
+
+    <!--
+        David can add the JavaScript file here after creating it.
+
+        Expected filename:
+        js/script.js
+
+        Uncomment the line below once the file exists.
+    -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
